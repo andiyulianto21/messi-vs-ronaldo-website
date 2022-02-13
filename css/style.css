@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@200;400;700;900&family=Lato:wght@300&display=swap');
+
+:root {
+    --primary-color: rgb(11, 14, 19);
+    --secondary-color: rgb(19, 24, 31);
+    --secondary-text-color: rgb(86, 109, 115);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Exo 2', sans-serif;
+    background-color: var(--primary-color);
+}
+
+img {
+    width: 100%;
+}
+
+.hero .container,
+.content1 .container {
+    width: 70%;
+    margin: auto;
+}
+
+.hero .flex img {
+    width: 40%;
+}
+
+.hero .title>span:first-child,
+.hero .title>span:nth-child(2) {
+    color: white;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.hero .title>span:nth-child(3) {
+    color: rgb(102, 102, 102);
+    font-weight: 700;
+    align-self: flex-end;
+}
+
+.hero .title>span:last-child {
+    color: rgb(236, 209, 56);
+    /* font-size: 1.1rem; */
+    font-weight: 700;
+    justify-self: end;
+    padding-top: 20px;
+}
+
+/* CONTENT1 */
+.content1 .container {
+    background-color: var(--secondary-color);
+    padding: 20px;
+}
+
+.container .grid>* {
+    justify-self: center;
+    text-align: center;
+    width: 100%;
+}
+
+.content1 .grid>p:first-child {
+    /* grid-column: 1 / span 3;
+    grid-row: 1 / 2; */
+    grid-area: name;
+    background-color: var(--secondary-text-color);
+}
+
+.content1 .grid>p:nth-child(2) {
+    /* grid-column: 4 / span 3; */
+    grid-area: name2;
+    background-color: var(--secondary-text-color);
+}
+
+.container .grid .box-1 {
+    background-color: rgb(0, 136, 140);
+}
+
+.container .grid .box-2 {
+    background-color: #00A0A5;
+}
+
+.container .grid .box-3 {
+    background-color: rgb(0, 185, 191);
+}
+
+.container .grid .box-4 {
+    background-color: rgb(254, 49, 126);
+}
+
+.container .grid .box-5 {
+    background-color: rgb(254, 24, 110);
+}
+
+.container .grid .box-6 {
+    background-color: rgb(251, 1, 95);
+}
+
+.content1 .grid .mpg {
+    grid-area: mpg;
+}
+
+.content1 .grid .mpg2 {
+    grid-area: mpg2;
+}
+
+.content1 .grid .mpgc {
+    grid-area: mpgc;
+}
+
+.content1 .grid .mpgc2 {
+    grid-area: mpgc2;
+}
+
+/* UTILITIES */
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.grid {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr 3fr 1fr 1fr;
+    grid-template-areas:
+        'name name name name2 name2 name2'
+        'box1 box2 box3 box4 box5 box6'
+        'mpg mpg mpg mpg2 mpg2 mpg2'
+        'mpgc mpgc mpgc mpgc2 mpgc2 mpgc2';
+    justify-content: center;
+    align-items: center;
+}
+
+/* text */
+.text-title {
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: white;
+}
+
+.text-desc {
+    font-size: 1rem;
+    color: var(--secondary-text-color);
+}
+
+/* padding */
+.py-03 {
+    padding: 0.3rem 0;
+}
+
+.py-1 {
+    padding: 1rem 0;
+}
+
+.py-2 {
+    padding: 1.5rem 0;
+}
+
+.py-3 {
+    padding: 2rem 0;
+}
+
+.py-4 {
+    padding: 2.5rem 0;
+}
